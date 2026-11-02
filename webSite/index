@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Progetto Alessandria — Sostieni la biblioteca aperta</title>
+<meta name="description" content="Alessandria è una biblioteca digitale costruita dagli studenti e sorvegliata dall'AI. Ogni contenuto viene validato per garantirne l'affidabilità. Progetto attualmente in fase di sviluppo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body id="top">
+
+<!-- ============ ICON SPRITE ============ -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path fill="currentColor" d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="m4 12.5 5 5L20 6.5"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M4 12h15m0 0-6-6m6 6-6 6"/></symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 20V5m0 0L6 11m6-6 6 6"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0 5-5m-5 5-5-5M4 20h16"/></symbol>
+  <symbol id="i-trending" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 17l6-6 4 4 8-8m0 0h-5m5 0v5"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 20s-7-4.5-7-9.5A4 4 0 0 1 12 7a4 4 0 0 1 7 3.5C19 15.5 12 20 12 20Z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 19v-1.5a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V19M9 9.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM17 2.6a4 4 0 0 1 0 7.8M22 19v-1.5a4 4 0 0 0-3-3.8"/></symbol>
+  <symbol id="i-user-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M11 19v-1.5a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V19M6.5 9.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM14.5 16.5l2 2 4.5-4.5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 24 24"><path fill="currentColor" d="M9.5 5C6.5 6.6 4.7 9.2 4.7 12.2c0 3.9 2.3 6.8 5.6 6.8 2.6 0 4.6-1.9 4.6-4.4 0-2.4-1.7-4.2-4-4.2-.5 0-1 .1-1.3.2.4-1.6 1.6-3 3.4-4L9.5 5Zm10 0c-3 1.6-4.8 4.2-4.8 7.2 0 3.9 2.3 6.8 5.6 6.8 2.6 0 4.6-1.9 4.6-4.4 0-2.4-1.7-4.2-4-4.2-.5 0-1 .1-1.3.2.4-1.6 1.6-3 3.4-4L19.5 5Z"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" d="M7.5 3.5h9a4 4 0 0 1 4 4v9a4 4 0 0 1-4 4h-9a4 4 0 0 1-4-4v-9a4 4 0 0 1 4-4Z"/><circle cx="12" cy="12" r="3.6" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M5 3.5A1.9 1.9 0 1 1 5 7.3a1.9 1.9 0 0 1 0-3.8ZM3.4 9h3.2v11.5H3.4V9Zm5.3 0h3v1.6h.1c.5-.9 1.7-1.9 3.5-1.9 3.1 0 3.7 2 3.7 4.7v7.1h-3.2v-6.3c0-1.5-.5-2.5-1.8-2.5-1.4 0-2.1 1-2.1 2.4v6.4H8.7V9Z"/></symbol>
+  <symbol id="i-telegram" viewBox="0 0 24 24"><path fill="currentColor" d="M21.5 4.3 2.9 11.5c-1.1.4-1 1.1-.2 1.3l4.7 1.5 1.8 5.5c.2.6.4.7.8.7.4 0 .6-.2.9-.5l2.2-2.1 4.6 3.4c.8.4 1.4.2 1.6-.8l3-14c.3-1.2-.4-1.7-1-1.5Zm-3.7 3.5-7.2 6.5-.3 3.2-1.6-4.9 9.1-4.8Z"/></symbol>
+  <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.23c0 4.51 2.87 8.34 6.84 9.69.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.17-1.1-1.48-1.1-1.48-.9-.63.07-.62.07-.62 1 .07 1.52 1.05 1.52 1.05.89 1.56 2.33 1.11 2.9.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.4 9.4 0 0 1 12 7.4c.85 0 1.7.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49C19.13 20.57 22 16.74 22 12.23 22 6.58 17.52 2 12 2Z"/></symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="site-header">
+  <div class="container nav-bar">
+    <a class="brand" href="#top" aria-label="Progetto Alessandria — home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="20" fill="#00A8C4"/>
+        <rect x="8" y="12" width="3" height="16" rx="1" fill="#fff"/>
+        <rect x="13" y="8" width="3" height="20" rx="1" fill="#fff"/>
+        <rect x="18" y="10" width="3" height="18" rx="1" fill="#fff"/>
+        <rect x="23" y="8" width="3" height="20" rx="1" fill="#fff"/>
+        <rect x="28" y="12" width="3" height="16" rx="1" fill="#fff"/>
+        <rect x="7" y="28" width="25" height="2" rx="1" fill="#fff"/>
+      </svg>
+      <span class="brand-name">Progetto Alessandria</span>
+    </a>
+
+    <button class="burger" id="burger" aria-label="Apri il menu" aria-expanded="false" aria-controls="nav-menu">
+      <svg class="icon" id="burger-icon"><use href="#i-menu"></use></svg>
+    </button>
+
+    <nav class="nav-menu" id="nav-menu" aria-label="Navigazione principale">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="#progetto">Il progetto</a></li>
+        <li><a class="nav-link" href="#come-funziona">Come funziona</a></li>
+        <li><a class="nav-link" href="#documentazione">Documentazione</a></li>
+        <li><a class="nav-link" href="#chi-siamo">Chi siamo</a></li>
+        <li><a class="nav-link" href="#contatti">Contatti</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a class="btn btn-green nav-donate" href="https://buy.stripe.com/SOSTITUIRE">Sostieni</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow">⚠️ Progetto in fase di sviluppo · Raccolta fondi aperta</span>
+        <h1 class="hero-title">Alessandria</h1>
+        <p class="hero-lead">
+          Una biblioteca digitale costruita dagli studenti, sorvegliata dall'AI.
+          Ogni contenuto caricato viene analizzato e validato automaticamente per garantirne
+          l'affidabilità — prima che diventi conoscenza condivisa.
+        </p>
+        <ul class="hero-list">
+          <li>
+            <span class="bullet"><svg class="icon"><use href="#i-heart"></use></svg></span>
+            Aperta, gratuita e accessibile a tutti, per sempre
+          </li>
+          <li>
+            <span class="bullet"><svg class="icon"><use href="#i-users"></use></svg></span>
+            Alimentata dagli studenti, curata dalla comunità
+          </li>
+          <li>
+            <span class="bullet"><svg class="icon"><use href="#i-user-check"></use></svg></span>
+            Ogni contenuto verificato dall'AI su fonti accreditate
+          </li>
+        </ul>
+        <div class="hero-actions">
+          <a class="btn btn-green btn-lg" href="https://buy.stripe.com/SOSTITUIRE">Sostieni il progetto</a>
+          <a class="btn btn-outline btn-lg" href="#progetto">Scopri di più</a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <img src="assets/biblioteca-alessandria.jpg" alt="Illustrazione storica della Biblioteca di Alessandria">
+        <div class="stat-card stat-card--1">
+          <strong>Open</strong>
+          <span>source &amp; free</span>
+        </div>
+        <div class="stat-card stat-card--2">
+          <strong>AI</strong>
+          <span>fact-checking</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COME FUNZIONA ============ -->
+  <section class="section section--values" id="come-funziona">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Come funziona</span>
+        <h2>La conoscenza verificata, non solo condivisa</h2>
+      </div>
+      <div class="value-grid">
+        <article class="value-item reveal">
+          <span class="value-icon"><svg class="icon"><use href="#i-users"></use></svg></span>
+          <h3>Gli studenti contribuiscono</h3>
+          <p>Appunti, riassunti, esercizi e dispense caricati liberamente dalla comunità studentesca.</p>
+        </article>
+        <article class="value-item reveal">
+          <span class="value-icon"><svg class="icon"><use href="#i-trending"></use></svg></span>
+          <h3>L'AI valida le informazioni</h3>
+          <p>Ogni contenuto viene analizzato e confrontato con fonti accreditate (arXiv, PubMed, DOI) prima della pubblicazione.</p>
+        </article>
+        <article class="value-item reveal">
+          <span class="value-icon"><svg class="icon"><use href="#i-user-check"></use></svg></span>
+          <h3>La comunità revisiona</h3>
+          <p>Curatori umani affiancano l'AI: il giudizio finale resta sempre nelle mani delle persone.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ IL PROGETTO ============ -->
+  <section class="section section--stories" id="progetto">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Il progetto</span>
+        <h2>Perché il mondo ha bisogno di Alessandria</h2>
+      </div>
+
+      <div class="story-grid">
+        <article class="story-card reveal">
+          <div class="story-media">
+            <img src="assets/story-1.svg" alt="Studenti che condividono appunti e materiale di studio">
+            <span class="story-logo">Il problema</span>
+          </div>
+          <div class="story-body">
+            <h3>La conoscenza c'è, ma non ci si può fidare</h3>
+            <p>
+              Wikipedia può essere modificata da chiunque. I forum di studio sono caotici.
+              Le piattaforme di appunti vendono i tuoi materiali senza verificarne la correttezza.
+              Serve un posto dove la qualità è garantita.
+            </p>
+          </div>
+        </article>
+
+        <article class="story-card reveal">
+          <div class="story-media">
+            <img src="assets/story-2.svg" alt="Schema del motore AI di validazione delle informazioni">
+            <span class="story-logo">La soluzione</span>
+          </div>
+          <div class="story-body">
+            <h3>Un motore di validazione, non di generazione</h3>
+            <p>
+              Alessandria non inventa conoscenza: la verifica. Ogni materiale caricato riceve
+              uno score di affidabilità pubblico, basato su fonti scientifiche aperte e revisione peer.
+              L'AI è un guardiano, non un autore.
+            </p>
+          </div>
+        </article>
+
+        <article class="story-card reveal">
+          <div class="story-media">
+            <img src="assets/story-3.svg" alt="Biblioteca digitale aperta e accessibile a studenti di tutto il mondo">
+            <span class="story-logo">La visione</span>
+          </div>
+          <div class="story-body">
+            <h3>Aperta, per sempre, per chiunque</h3>
+            <p>
+              Nessun paywall, nessun abbonamento. Open source e self-hostable,
+              perché la conoscenza verificata deve restare libera — per gli studenti
+              di oggi e di domani.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="section-cta">
+        <a class="btn btn-green btn-lg" href="https://buy.stripe.com/SOSTITUIRE">Sostieni Alessandria</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DOCUMENTAZIONE ============ -->
+  <section class="section section--docs" id="documentazione">
+    <div class="container">
+      <div class="docs-card reveal">
+        <div class="docs-copy">
+          <span class="eyebrow">Documentazione</span>
+          <h2>Il progetto, raccontato per intero</h2>
+          <p>
+            Visione, funzionamento, architettura, governance, roadmap e uso dei fondi:
+            scarica il documento completo per leggere nel dettaglio come stiamo costruendo Alessandria.
+          </p>
+          <ul class="docs-meta">
+            <li>PDF · 21 pagine</li>
+            <li>Italiano</li>
+            <li>Versione 1.0 · Novembre 2026</li>
+          </ul>
+        </div>
+        <div class="docs-action">
+          <a class="btn btn-green btn-lg" href="assets/documentazione-progetto-alessandria.pdf" download="documentazione-progetto-alessandria.pdf" type="application/pdf">
+            <svg class="icon"><use href="#i-download"></use></svg>
+            Scarica la documentazione
+          </a>
+          <p class="docs-note">Nessuna registrazione richiesta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHI SIAMO ============ -->
+  <section class="section section--about" id="chi-siamo">
+    <div class="container about-inner">
+      <div class="about-copy">
+        <span class="eyebrow">Chi siamo</span>
+        <h2>Un progetto indipendente, ancora agli inizi</h2>
+        <p>
+          Alessandria nasce da un gruppo di sviluppatori e studenti convinti che la
+          conoscenza condivisa debba essere anche conoscenza verificata. Il progetto è
+          attualmente in fase di progettazione: le tue donazioni finanzieranno
+          direttamente lo sviluppo della piattaforma, aperta e senza scopo di lucro.
+        </p>
+        <p>
+          Crediamo che l'AI non debba sostituire il pensiero critico, ma proteggerlo.
+          Per questo il nostro motore di validazione sarà sempre affiancato dalla revisione
+          umana della comunità.
+        </p>
+      </div>
+
+      <div class="about-media">
+        <img src="assets/team.svg" alt="Il team del Progetto Alessandria">
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="testimonial">
+        <div class="testimonial-track">
+          <figure class="testimonial-slide">
+            <svg class="icon quote-mark"><use href="#i-quote"></use></svg>
+            <blockquote>
+              La vera minaccia alla conoscenza non è la disinformazione che non conosciamo,
+              ma quella che accettiamo senza verificare. Alessandria vuole essere il primo
+              filtro consapevole nell'era dell'informazione illimitata.
+            </blockquote>
+            <figcaption><strong>Il team di Alessandria</strong><span>Nota: il progetto è in fase di sviluppo iniziale</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA DONAZIONE ============ -->
+  <section class="section section--cta" id="dona">
+    <div class="container">
+      <div class="cta-card reveal">
+        <div class="cta-media">
+          <img src="assets/cta.svg" alt="">
+        </div>
+        <div class="cta-body">
+          <h2>Aiutaci a costruire la biblioteca che il mondo merita</h2>
+          <p>
+            Il progetto è ancora in fase di sviluppo. Ogni donazione va direttamente
+            alla costruzione della piattaforma. Il pagamento è sicuro e gestito da Stripe.
+          </p>
+          <a class="btn btn-green btn-lg" href="https://buy.stripe.com/SOSTITUIRE">Sostieni ora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTATTI ============ -->
+  <section class="section section--contact" id="contatti">
+    <div class="container contact-inner">
+      <div class="contact-copy">
+        <span class="eyebrow">Contatti</span>
+        <h2>Vuoi saperne di più o collaborare?</h2>
+        <p>Scrivici: siamo aperti a collaborazioni, suggerimenti e a chiunque voglia contribuire al progetto.</p>
+        <ul class="contact-details">
+          <li><strong>Email</strong><a href="mailto:info@progetto-alessandria.org">info@progetto-alessandria.org</a></li>
+          <li><strong>GitHub</strong><a href="https://github.com" target="_blank" rel="noopener">github.com/alessandria (prossimamente)</a></li>
+          <li><strong>Stato</strong><span>⚠️ In fase di sviluppo — aggiornamenti in arrivo</span></li>
+        </ul>
+      </div>
+
+      <div class="donation-card">
+        <h3>Sostieni il progetto</h3>
+        <p>Siamo ancora agli inizi: ogni contributo è fondamentale per realizzare la piattaforma.</p>
+        <ul class="plan-list">
+          <li><svg class="icon"><use href="#i-check"></use></svg>Scegli l'importo che desideri</li>
+          <li><svg class="icon"><use href="#i-check"></use></svg>Paga con carta o wallet</li>
+          <li><svg class="icon"><use href="#i-check"></use></svg>Ricevi la conferma della donazione</li>
+        </ul>
+        <a class="btn btn-green btn-block" href="https://buy.stripe.com/SOSTITUIRE">Dona</a>
+        <p class="donation-note">Il pulsante apre il link di pagamento sicuro gestito da Stripe.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div class="footer-brand">
+      <a class="brand brand--light" href="#top">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="20" fill="#00A8C4"/>
+          <rect x="8" y="12" width="3" height="16" rx="1" fill="#fff"/>
+          <rect x="13" y="8" width="3" height="20" rx="1" fill="#fff"/>
+          <rect x="18" y="10" width="3" height="18" rx="1" fill="#fff"/>
+          <rect x="23" y="8" width="3" height="20" rx="1" fill="#fff"/>
+          <rect x="28" y="12" width="3" height="16" rx="1" fill="#fff"/>
+          <rect x="7" y="28" width="25" height="2" rx="1" fill="#fff"/>
+        </svg>
+        <span class="brand-name">Progetto Alessandria</span>
+      </a>
+      <p>Biblioteca digitale open source alimentata dagli studenti e validata dall'AI. Progetto indipendente, senza scopo di lucro, attualmente in fase di sviluppo.</p>
+      <p class="footer-social-label">Seguici per gli aggiornamenti:</p>
+      <ul class="socials">
+        <li><a href="#top" aria-label="GitHub"><svg class="icon"><use href="#i-github"></use></svg></a></li>
+        <li><a href="#top" aria-label="Telegram"><svg class="icon"><use href="#i-telegram"></use></svg></a></li>
+        <li><a href="#top" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin"></use></svg></a></li>
+        <li><a href="#top" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"></use></svg></a></li>
+      </ul>
+    </div>
+
+    <nav class="footer-col" aria-label="Il progetto">
+      <h3>Il progetto</h3>
+      <ul>
+        <li><a href="#progetto">Il progetto</a></li>
+        <li><a href="#come-funziona">Come funziona</a></li>
+        <li><a href="#documentazione">Documentazione</a></li>
+        <li><a href="#chi-siamo">Chi siamo</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer-col" aria-label="Sostieni">
+      <h3>Sostieni</h3>
+      <ul>
+        <li><a href="https://buy.stripe.com/SOSTITUIRE">Dona ora</a></li>
+        <li><a href="#dona">Come donare</a></li>
+        <li><a href="#contatti">Collabora con noi</a></li>
+        <li><a href="#top">Informativa sulla privacy</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="container footer-bottom">
+    <ul class="payments" aria-label="Metodi di pagamento accettati">
+      <li>VISA</li>
+      <li>Mastercard</li>
+      <li>AMEX</li>
+      <li>Stripe</li>
+      <li>PayPal</li>
+      <li>Google Pay</li>
+      <li>Apple Pay</li>
+      <li>Satispay</li>
+    </ul>
+    <div class="legal">
+      <a href="#top">Informativa sulla privacy</a>
+      <span aria-hidden="true">·</span>
+      <a href="#top">Termini e condizioni d'uso</a>
+      <button class="to-top" id="to-top">
+        Torna in alto <svg class="icon"><use href="#i-arrow-up"></use></svg>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
