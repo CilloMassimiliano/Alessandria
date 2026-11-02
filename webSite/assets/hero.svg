@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1000" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Community di sostenitori">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ECF8F0"/>
+      <stop offset=".45" stop-color="#C4EACF"/>
+      <stop offset="1" stop-color="#8FDFEA"/>
+    </linearGradient>
+    <linearGradient id="fig1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#003874"/>
+      <stop offset="1" stop-color="#00A8C4"/>
+    </linearGradient>
+    <linearGradient id="fig2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2E9B5B"/>
+      <stop offset="1" stop-color="#7BCA99"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="55"/>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="7"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="1000" fill="url(#bg)"/>
+
+  <g filter="url(#soft)" opacity=".75">
+    <circle cx="180" cy="220" r="200" fill="#00A8C4"/>
+    <circle cx="760" cy="150" r="170" fill="#2E9B5B"/>
+    <circle cx="640" cy="760" r="270" fill="#003874" opacity=".55"/>
+    <circle cx="120" cy="820" r="180" fill="#7BCA99" opacity=".8"/>
+  </g>
+
+  <!-- figure -->
+  <g>
+    <circle cx="300" cy="600" r="92" fill="url(#fig1)"/>
+    <path d="M140 1000c0-92 72-166 160-166s160 74 160 166z" fill="url(#fig1)"/>
+  </g>
+  <g opacity=".92">
+    <circle cx="600" cy="650" r="78" fill="url(#fig2)"/>
+    <path d="M462 1000c0-78 62-140 138-140s138 62 138 140z" fill="url(#fig2)"/>
+  </g>
+  <g opacity=".75">
+    <circle cx="800" cy="720" r="62" fill="#003874"/>
+    <path d="M690 1000c0-62 49-112 110-112s110 50 110 112z" fill="#003874"/>
+  </g>
+
+  <!-- floating hearts -->
+  <g fill="#FFFFFF" opacity=".85">
+    <path d="M690 300c0-22 18-40 40-40 16 0 29 9 36 22 7-13 20-22 36-22 22 0 40 18 40 40 0 44-52 74-76 88-24-14-76-44-76-88z" transform="translate(-330 40) scale(.55)"/>
+    <path d="M690 300c0-22 18-40 40-40 16 0 29 9 36 22 7-13 20-22 36-22 22 0 40 18 40 40 0 44-52 74-76 88-24-14-76-44-76-88z" transform="translate(60 40) scale(.42)"/>
+  </g>
+
+  <rect width="900" height="1000" filter="url(#grain)" opacity=".05"/>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Il team di Rete del Dono">
+  <defs>
+    <linearGradient id="tbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EBEEF2"/>
+      <stop offset=".55" stop-color="#D1EEDB"/>
+      <stop offset="1" stop-color="#CBFEFA"/>
+    </linearGradient>
+    <linearGradient id="tfig1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00A8C4"/>
+      <stop offset="1" stop-color="#003874"/>
+    </linearGradient>
+    <linearGradient id="tfig2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2E9B5B"/>
+      <stop offset="1" stop-color="#1B673B"/>
+    </linearGradient>
+    <filter id="tblur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="tgrain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="5"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="900" height="640" fill="url(#tbg)"/>
+  <g filter="url(#tblur)" opacity=".7">
+    <circle cx="120" cy="120" r="150" fill="#00A8C4" opacity=".6"/>
+    <circle cx="800" cy="150" r="140" fill="#2E9B5B" opacity=".6"/>
+    <circle cx="450" cy="600" r="220" fill="#003874" opacity=".35"/>
+  </g>
+
+  <g>
+    <circle cx="230" cy="330" r="62" fill="url(#tfig1)"/>
+    <path d="M120 640c0-61 49-110 110-110s110 49 110 110z" fill="url(#tfig1)"/>
+  </g>
+  <g>
+    <circle cx="450" cy="300" r="70" fill="url(#tfig2)"/>
+    <path d="M326 640c0-68 56-124 124-124s124 56 124 124z" fill="url(#tfig2)"/>
+  </g>
+  <g>
+    <circle cx="672" cy="340" r="58" fill="url(#tfig1)"/>
+    <path d="M570 640c0-56 46-102 102-102s102 46 102 102z" fill="url(#tfig1)"/>
+  </g>
+
+  <rect width="900" height="640" filter="url(#tgrain)" opacity=".05"/>
+</svg>

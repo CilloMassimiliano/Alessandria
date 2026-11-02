@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 700" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Unisciti alla community">
+  <defs>
+    <linearGradient id="cbg" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#00A8C4"/>
+      <stop offset=".6" stop-color="#3DDCF7"/>
+      <stop offset="1" stop-color="#D5F0FB"/>
+    </linearGradient>
+    <filter id="cblur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="38"/>
+    </filter>
+    <filter id="cgrain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="17"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="800" height="700" fill="url(#cbg)"/>
+  <g filter="url(#cblur)" opacity=".85">
+    <circle cx="680" cy="120" r="150" fill="#2E9B5B"/>
+    <circle cx="120" cy="600" r="170" fill="#003874"/>
+  </g>
+
+  <!-- abstract hands holding a heart -->
+  <g fill="#FFFFFF" opacity=".95">
+    <path d="M400 300c0-44 36-80 80-80 32 0 58 18 72 44 14-26 40-44 72-44 44 0 80 36 80 80 0 88-104 148-152 176-48-28-152-88-152-176z" transform="translate(-200 -40) scale(.85)"/>
+  </g>
+  <g fill="#003874" opacity=".9">
+    <path d="M170 520c40-30 90-30 130 0l70 54-52 62-88-52-70 46z" opacity=".55"/>
+    <path d="M630 520c-40-30-90-30-130 0l-70 54 52 62 88-52 70 46z" opacity=".55"/>
+  </g>
+  <rect width="800" height="700" filter="url(#cgrain)" opacity=".05"/>
+</svg>
